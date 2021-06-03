@@ -1,7 +1,7 @@
 var plugins = [{
       name: 'gatsby-source-sanity',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
-      options: {"plugins":[],"projectId":"tkm742ml","dataset":"production","watchMode":true},
+      options: {"plugins":[],"projectId":"tkm742ml","dataset":"production"},
     },{
       name: 'gatsby-plugin-styled-components',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),

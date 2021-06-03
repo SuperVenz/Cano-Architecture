@@ -3810,8 +3810,7 @@ var plugins = [{
   options: {
     "plugins": [],
     "projectId": "tkm742ml",
-    "dataset": "production",
-    "watchMode": true
+    "dataset": "production"
   }
 }, {
   name: 'gatsby-plugin-styled-components',

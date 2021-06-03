@@ -22,6 +22,7 @@ const FormBox = styled.form`
 const TextContainer = styled.div`
   padding-top: 40px;
   padding-left: 26px;
+  padding-right: 26px;
   @media only screen and (min-width: 600px) {
     padding-left: 40px;
   }
