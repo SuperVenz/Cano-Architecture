@@ -9,6 +9,7 @@ module.exports = {
         projectId: "tkm742ml",
         dataset: "production",
         token: process.env.SANITY_TOKEN,
+        watchMode: true,
       },
     },
     "gatsby-plugin-styled-components",

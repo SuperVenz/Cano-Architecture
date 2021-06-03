@@ -51,7 +51,9 @@ const Text = styled.h4`
     padding-left: 64px;
   }
 `;
-
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 function Nav() {
   const data = useStaticQuery(graphql`
     {
@@ -72,15 +74,15 @@ function Nav() {
         alt={data.sanityMetaData.logo.alt}
       />
       <Div>
-        <Link to="/">
+        <StyledLink to="/">
           <Text>Home</Text>
-        </Link>
-        <Link to="/gallery">
+        </StyledLink>
+        <StyledLink to="/gallery">
           <Text>Galleries</Text>
-        </Link>
-        <Link to="/contact">
+        </StyledLink>
+        <StyledLink to="/contact">
           <Text>Contact</Text>
-        </Link>
+        </StyledLink>
       </Div>
     </Container>
   );

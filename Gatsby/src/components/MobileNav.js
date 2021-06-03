@@ -32,27 +32,29 @@ const Icon = styled.div`
   align-items: center;
   text-decoration: none;
 `;
-
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 function MobileNav() {
   return (
     <Nav>
       <Icon>
-        <Link to="/" activeStyle={{ color: "blue" }}>
+        <StyledLink to="/" activeStyle={{ color: "blue" }}>
           <Home />
           <Text>Home</Text>
-        </Link>
+        </StyledLink>
       </Icon>
       <Icon>
-        <Link to="/gallery">
+        <StyledLink to="/gallery">
           <Gallery />
           <Text>Gallery</Text>
-        </Link>
+        </StyledLink>
       </Icon>
       <Icon>
-        <Link to="/contact">
+        <StyledLink to="/contact">
           <Contact />
           <Text>Contact</Text>
-        </Link>
+        </StyledLink>
       </Icon>
     </Nav>
   );

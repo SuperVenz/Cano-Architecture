@@ -1,7 +1,7 @@
 var plugins = [{
       name: 'gatsby-source-sanity',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
-      options: {"plugins":[],"projectId":"tkm742ml","dataset":"production"},
+      options: {"plugins":[],"projectId":"tkm742ml","dataset":"production","watchMode":true},
     },{
       name: 'gatsby-plugin-styled-components',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
@@ -14,10 +14,6 @@ var plugins = [{
       name: 'gatsby-plugin-react-helmet',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
-    },{
-      name: 'gatsby-plugin-sitemap',
-      plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
-      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/home/alec/Projects/Cano Architecture/Gatsby/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
