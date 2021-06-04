@@ -67,13 +67,11 @@ const StringInput = styled.input`
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: none;
 `;
 
 const AreaText = styled.textarea`
   width: 100%;
   height: 168px;
-  border: none;
   line-height: 24px;
   margin-bottom: 16px;
   @media only screen and (min-width: 600px) {
@@ -81,16 +79,28 @@ const AreaText = styled.textarea`
   }
 `;
 const Submit = styled.button`
-  padding-top: 24px;
-  width: 80vw;
-  background: blue;
-  color: white;
-  font-weight: bold;
-  padding-bottom: 24px;
+  margin-top: 32px;
+  height: 15%;
+  width: 80%;
+  background: #0038ff;
   border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 32px;
+  color: white;
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+  }
   @media only screen and (min-width: 1000px) {
-    width: 50vw;
-    margin-left: 20%;
+    width: 40%;
+    margin-left: 25%;
+  }
+  &:hover {
+    background: #1b43c6;
   }
 `;
 const P = styled.p`
@@ -103,6 +113,9 @@ const Div = styled.div`
   text-align: center;
   width: 90%;
   padding-bottom: 32px;
+`;
+const A = styled.a`
+  text-decoration: none;
 `;
 function Form() {
   const [name, setName] = useState("");
@@ -245,11 +258,11 @@ function Form() {
         <Div>
           <P>
             You can also contact us using<> </>
-            <a href="tel:9096275477">(909) 627-5477</a>
+            <A href="tel:9096275477">(909) 627-5477</A>
             <> or </>
-            <a href="mailto: info@canoarchitecture.com">
+            <A href="mailto: info@canoarchitecture.com">
               info@canoarchitecture.com
-            </a>
+            </A>
           </P>
         </Div>
       </FormBox>

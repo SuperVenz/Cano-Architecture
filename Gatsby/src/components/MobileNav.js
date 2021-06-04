@@ -6,8 +6,7 @@ import Home from "../images/Home.svg";
 import { Link } from "gatsby";
 
 const Nav = styled.nav`
-  margin-top: 32px;
-  height: 15vh;
+  height: 10vh;
   position: sticky;
   bottom: 0;
   width: 100vw;
@@ -22,7 +21,7 @@ const Nav = styled.nav`
   }
 `;
 const Text = styled.p`
-  padding-top: 8px;
+  padding-top: 4px;
   text-decoration: none;
 `;
 const Icon = styled.div`
@@ -35,12 +34,13 @@ const Icon = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
+const StyledHome = styled(Home)``;
 function MobileNav() {
   return (
     <Nav>
       <Icon>
         <StyledLink to="/" activeStyle={{ color: "blue" }}>
-          <Home />
+          <StyledHome />
           <Text>Home</Text>
         </StyledLink>
       </Icon>

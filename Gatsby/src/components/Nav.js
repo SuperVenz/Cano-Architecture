@@ -15,6 +15,7 @@ const Container = styled.nav`
     background: #414141;
     height: 20vh;
     align-items: center;
+    border-bottom: solid black 3px;
   }
   @media only screen and (min-width: 1000px) {
     flex-flow: row nowrap;
@@ -39,8 +40,9 @@ const Div = styled.div`
     width: auto;
   }
 `;
-const Text = styled.h4`
+const Text = styled.h3`
   color: white;
+  font-size: 24px;
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 24px;

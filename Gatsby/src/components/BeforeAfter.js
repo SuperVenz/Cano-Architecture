@@ -76,7 +76,7 @@ function BeforeAfter(props) {
         return (
           <Div key={obj.beforeImage.alt}>
             <ReactCompareSliderStyled
-              position={25}
+              position={50}
               itemOne={
                 <StyledImg
                   image={obj.beforeImage.asset.gatsbyImageData}
