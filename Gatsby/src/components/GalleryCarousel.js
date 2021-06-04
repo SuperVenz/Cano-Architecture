@@ -5,11 +5,13 @@ import styled from "styled-components";
 
 const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 600px) {
-    width: 50%;
-    height: 400px;
+    height: 600px;
+    width: 100%;
   }
 `;
-const StyledCarousel = styled(Carousel)``;
+const StyledCarousel = styled(Carousel)`
+  width: 50%;
+`;
 function GalleryCarousel({ images }) {
   return (
     <StyledCarousel

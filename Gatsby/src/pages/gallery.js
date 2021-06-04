@@ -22,15 +22,31 @@ const Grid = styled.div`
 const FirstGal = styled.div`
   grid-area: fs;
   padding-top: 88px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 const SecondGal = styled.div`
   grid-area: sc;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 const ThirdGal = styled.div`
   grid-area: th;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 const FourthGal = styled.div`
   grid-area: fr;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 function gallery({ data }) {
