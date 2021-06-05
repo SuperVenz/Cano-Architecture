@@ -24,8 +24,9 @@ const Container = styled.nav`
 `;
 const Logo = styled(GatsbyImage)`
   width: 30%;
+
   @media only screen and (min-width: 1000px) {
-    width: 30%;
+    width: 15%;
     margin-left: 10%;
     height: 100%;
     margin-right: 5%;
@@ -38,6 +39,7 @@ const Div = styled.div`
   justify-content: center;
   @media only screen and (min-width: 1000px) {
     width: auto;
+    margin-left: 25%;
   }
 `;
 const Text = styled.h3`

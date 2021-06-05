@@ -41,7 +41,7 @@ const Grid = styled.div`
     grid-template-areas:
       "he he he he he he . ex  ex ex ex ex . . "
       ". . . . . ed ed ed ed ed . . . ."
-      ". ca ca ca ca ca ca ca ca ca ca ca ca ca"
+      ". ca ca ca ca ca ca ca ca ca ca ca ca ."
       ". xp xp xp xp xp . pi pi pi pi pi pi pi";
   }
 `;
@@ -73,7 +73,6 @@ const Experience = styled.div`
   grid-area: xp;
   margin-top: 32px;
   @media only screen and (min-width: 1000px) {
-    padding-left: 20%;
   }
 `;
 const Picture = styled.div`

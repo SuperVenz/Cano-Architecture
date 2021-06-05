@@ -229,7 +229,7 @@ function Form() {
         </Label>
 
         <Label htmlFor="address">
-          <Text>Location</Text>
+          <Text>Address</Text>
           <StringInput
             type="text"
             name="address"

@@ -10,12 +10,26 @@ const Container = styled.div`
   @media only screen and (min-width: 600px) {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
   }
 `;
 const Text = styled.h4`
   @media only screen and (min-width: 600px) {
     padding-bottom: 16px;
     padding-top: 8px;
+  }
+`;
+const TextBefore = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: flex;
+    font-size: 1.3em;
+
+    flex-direction: row nowrap;
+    width: 95%;
+    justify-content: space-between;
+    position: relative;
+    top: 30px;
+    z-index: 50;
   }
 `;
 const Div = styled.div`
@@ -38,6 +52,10 @@ const Div = styled.div`
       height: 300px;
     }
   }
+`;
+const P = styled.p`
+  background-color: white;
+  opacity: 0.5;
 `;
 const ReactCompareSliderStyled = styled(ReactCompareSlider)`
   @media only screen and (min-width: 1000px) {
@@ -75,7 +93,13 @@ function BeforeAfter(props) {
       {data.sanityHomePage.beforeAfter.map((obj) => {
         return (
           <Div key={obj.beforeImage.alt}>
+            <TextBefore>
+              <P>Before</P>
+              <P>After</P>
+            </TextBefore>
             <ReactCompareSliderStyled
+              beforeLabel={true}
+              afterLabel={true}
               position={50}
               itemOne={
                 <StyledImg

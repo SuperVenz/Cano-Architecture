@@ -21,7 +21,6 @@ const Nav = styled.nav`
   }
 `;
 const Text = styled.p`
-  padding-top: 4px;
   text-decoration: none;
 `;
 const Icon = styled.div`
@@ -30,6 +29,7 @@ const Icon = styled.div`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  padding-top: 4px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;

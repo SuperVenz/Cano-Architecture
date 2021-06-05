@@ -10,7 +10,10 @@ const StyledImg = styled(GatsbyImage)`
   }
 `;
 const StyledCarousel = styled(Carousel)`
-  width: 50%;
+  width: 100%;
+  @media only screen and (min-width: 600px) {
+    width: 80%;
+  }
 `;
 function GalleryCarousel({ images }) {
   return (
