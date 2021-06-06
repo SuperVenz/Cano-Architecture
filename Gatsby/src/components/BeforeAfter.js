@@ -64,6 +64,7 @@ const ReactCompareSliderStyled = styled(ReactCompareSlider)`
 `;
 const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 1000px) {
+    object-fit: contain;
   }
 `;
 function BeforeAfter(props) {
@@ -98,16 +99,14 @@ function BeforeAfter(props) {
               <P>After</P>
             </TextBefore>
             <ReactCompareSliderStyled
-              beforeLabel={true}
-              afterLabel={true}
               position={50}
-              itemOne={
+              itemTwo={
                 <StyledImg
                   image={obj.beforeImage.asset.gatsbyImageData}
                   alt={obj.beforeImage.alt}
                 />
               }
-              itemTwo={
+              itemOne={
                 <StyledImg
                   image={obj.afterImage.asset.gatsbyImageData}
                   alt={obj.afterImage.alt}

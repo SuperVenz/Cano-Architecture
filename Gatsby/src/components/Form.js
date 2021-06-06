@@ -27,7 +27,6 @@ const TextContainer = styled.div`
     padding-left: 40px;
   }
   @media only screen and (min-width: 1000px) {
-    margin-top: 10%;
     padding-left: 0%;
     display: flex;
     flex-flow: column nowrap;

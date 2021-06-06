@@ -2,15 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.button`
-  margin-top: 32px;
   height: 15%;
   width: 60%;
   background: #0038ff;
+
   border: none;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
   border-radius: 32px;
   @media only screen and (min-width: 600px) {

@@ -106,11 +106,7 @@ export const query = graphql`
       }
       stain {
         asset {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            formats: AUTO
-            aspectRatio: 0.9932142857
-          )
+          gatsbyImageData(layout: CONSTRAINED, formats: AUTO)
         }
         alt
       }

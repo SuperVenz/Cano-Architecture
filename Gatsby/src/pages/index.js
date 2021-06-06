@@ -73,10 +73,14 @@ const Experience = styled.div`
   grid-area: xp;
   margin-top: 32px;
   @media only screen and (min-width: 1000px) {
+    padding-bottom: 10%;
   }
 `;
 const Picture = styled.div`
   grid-area: pi;
+  @media only screen and (min-width: 600px) {
+    padding-bottom: 10%;
+  }
 `;
 const HeaderPic = styled(GatsbyImage)`
   @media only screen and (min-width: 600px) {

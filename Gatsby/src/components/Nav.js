@@ -42,7 +42,7 @@ const Div = styled.div`
     margin-left: 25%;
   }
 `;
-const Text = styled.h3`
+const Text = styled.h4`
   color: white;
   font-size: 24px;
   padding-left: 32px;
