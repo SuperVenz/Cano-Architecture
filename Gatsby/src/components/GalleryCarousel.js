@@ -9,10 +9,48 @@ const StyledImg = styled(GatsbyImage)`
     height: 600px;
   }
 `;
+const Div = styled.div``;
 const StyledCarousel = styled(Carousel)`
   width: 100%;
   @media only screen and (min-width: 600px) {
-    height: 600px;
+    /* Background */
+    .control-next.control-arrow,
+    .control-next.control-arrow:hover {
+      background: black;
+    }
+    .control-prev.control-arrow,
+    .control-prev.control-arrow:hover {
+      background: black;
+    }
+
+    /* Arrow opacity */
+    .control-arrow,
+    .carousel-slider .control-arrow {
+      opacity: 1;
+    }
+
+    /* before Arrow */
+    .control-next.control-arrow:before {
+      content: "";
+      border: solid white;
+      border-width: 0 8px 8px 0;
+      display: block;
+      padding: 14px;
+      margin-right: 16px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+    .carousel .control-prev.control-arrow:before {
+      content: "";
+      border: solid white;
+      border-width: 0 8px 8px 0;
+      display: block;
+      padding: 14px;
+      margin-left: 16px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
     width: 80%;
   }
 `;
@@ -27,9 +65,13 @@ function GalleryCarousel({ images }) {
     >
       {images.map((pic, i) => {
         return (
-          <div key={i}>
-            <StyledImg image={pic.asset.gatsbyImageData} alt={pic.alt} />
-          </div>
+          <Div key={i}>
+            <StyledImg
+              image={pic.asset.gatsbyImageData}
+              alt={pic.alt}
+              objectFit="contain"
+            />
+          </Div>
         );
       })}
     </StyledCarousel>

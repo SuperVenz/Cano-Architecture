@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.button`
-  height: 15%;
-  width: 60%;
+  height: 17%;
+  width: 63%;
   background: #0038ff;
-
   border: none;
   text-align: center;
   text-decoration: none;

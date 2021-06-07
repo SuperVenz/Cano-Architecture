@@ -104,7 +104,6 @@ const IndexPage = ({ data }) => {
       <Grid>
         <Header>
           <HeaderPic
-            objectFit="cover"
             image={data.sanityHomePage.topPic.asset.gatsbyImageData}
             alt={data.sanityHomePage.topPic.alt}
           />
@@ -114,7 +113,7 @@ const IndexPage = ({ data }) => {
             header={data.sanityHomePage.excite_title}
             text={data.sanityHomePage.excite}
           />
-          <Button text="Test" />
+          <Button text="Contact Us" />
         </Excite>
         <Educate>
           <Article

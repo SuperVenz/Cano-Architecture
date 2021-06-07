@@ -29,7 +29,7 @@ const TextBefore = styled.div`
     justify-content: space-between;
     position: relative;
     top: 30px;
-    z-index: 50;
+    z-index: 40;
   }
 `;
 const Div = styled.div`
@@ -49,7 +49,7 @@ const Div = styled.div`
     height: 100%;
     &:nth-last-child(-n + 3) {
       width: 25%;
-      height: 300px;
+      height: 350px;
     }
   }
 `;
@@ -59,12 +59,14 @@ const P = styled.p`
 `;
 const ReactCompareSliderStyled = styled(ReactCompareSlider)`
   @media only screen and (min-width: 1000px) {
-    height: 350px;
+    height: 500px;
+    &:nth-last-child(-n + 3) {
+      height: 350px;
+    }
   }
 `;
 const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 1000px) {
-    object-fit: contain;
   }
 `;
 function BeforeAfter(props) {
@@ -104,12 +106,14 @@ function BeforeAfter(props) {
                 <StyledImg
                   image={obj.beforeImage.asset.gatsbyImageData}
                   alt={obj.beforeImage.alt}
+                  objectFit="contain"
                 />
               }
               itemOne={
                 <StyledImg
                   image={obj.afterImage.asset.gatsbyImageData}
                   alt={obj.afterImage.alt}
+                  objectFit="contain"
                 />
               }
             />
