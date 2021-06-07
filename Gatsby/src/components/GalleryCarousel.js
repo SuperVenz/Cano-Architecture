@@ -17,11 +17,11 @@ const StyledCarousel = styled(Carousel)`
     /* Background */
     .control-next.control-arrow,
     .control-next.control-arrow:hover {
-      background: black;
+      background: transparent;
     }
     .control-prev.control-arrow,
     .control-prev.control-arrow:hover {
-      background: black;
+      background: transparent;
     }
 
     /* Arrow opacity */
@@ -67,11 +67,7 @@ function GalleryCarousel({ images }) {
       {images.map((pic, i) => {
         return (
           <Div key={i}>
-            <StyledImg
-              image={pic.asset.gatsbyImageData}
-              alt={pic.alt}
-              objectFit="contain"
-            />
+            <StyledImg image={pic.asset.gatsbyImageData} alt={pic.alt} />
           </Div>
         );
       })}
