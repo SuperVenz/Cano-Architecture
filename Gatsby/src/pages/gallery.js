@@ -21,11 +21,16 @@ const Grid = styled.div`
 
 const FirstGal = styled.div`
   grid-area: fs;
-  padding-top: 88px;
+  padding-top: 32px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media only screen and (min-width: 600px) {
+  }
+  @media only screen and (min-width: 1000px) {
+    padding-bottom: 64px;
+  }
 `;
 const SecondGal = styled.div`
   grid-area: sc;
@@ -33,6 +38,9 @@ const SecondGal = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media only screen and (min-width: 1000px) {
+    padding-bottom: 64px;
+  }
 `;
 const ThirdGal = styled.div`
   grid-area: th;
@@ -40,6 +48,9 @@ const ThirdGal = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media only screen and (min-width: 1000px) {
+    padding-bottom: 64px;
+  }
 `;
 const FourthGal = styled.div`
   grid-area: fr;
@@ -47,6 +58,9 @@ const FourthGal = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media only screen and (min-width: 1000px) {
+    padding-bottom: 64px;
+  }
 `;
 
 function gallery({ data }) {

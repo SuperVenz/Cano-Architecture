@@ -12,6 +12,7 @@ const StyledImg = styled(GatsbyImage)`
 const Div = styled.div``;
 const StyledCarousel = styled(Carousel)`
   width: 100%;
+
   @media only screen and (min-width: 600px) {
     /* Background */
     .control-next.control-arrow,
