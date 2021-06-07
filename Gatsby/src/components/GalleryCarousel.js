@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -66,9 +67,9 @@ function GalleryCarousel({ images }) {
     >
       {images.map((pic, i) => {
         return (
-          <Div key={i}>
+          <div key={i}>
             <StyledImg image={pic.asset.gatsbyImageData} alt={pic.alt} />
-          </Div>
+          </div>
         );
       })}
     </StyledCarousel>

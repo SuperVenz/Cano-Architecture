@@ -116,6 +116,10 @@ const Div = styled.div`
 const A = styled.a`
   text-decoration: none;
 `;
+
+const H3 = styled.h3`
+  font-size: 24px;
+`;
 function Form() {
   const [name, setName] = useState("");
   const [business, setBusiness] = useState("");
@@ -152,8 +156,25 @@ function Form() {
   const data = useStaticQuery(graphql`
     {
       sanityContactForm {
+        name
+        namePh
+        business
+        businessPh
+        address
+        addressPh
+        email
+        emailPh
         header
         text
+        submit
+        phonePh
+        phone
+        info
+        infoPh
+      }
+      sanityMetaData {
+        email
+        number
       }
     }
   `);
@@ -179,36 +200,36 @@ function Form() {
         <input type="hidden" name="bot-field" />
 
         <Label htmlFor="name">
-          <Text>First And Last Name</Text>
+          <Text>{data.sanityContactForm.name}</Text>
           <StringInput
             required
             type="text"
             name="name"
-            placeholder="John Doe"
+            placeholder={data.sanityContactForm.namePh}
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></StringInput>
         </Label>
 
         <Label htmlFor="business">
-          <Text>Business (Optional)</Text>
+          <Text>{data.sanityContactForm.business}</Text>
           <StringInput
             required
             type="text"
             name="business"
-            placeholder="e.g. Jude Construction"
+            placeholder={data.sanityContactForm.businessPh}
             value={business}
             onChange={(e) => setBusiness(e.target.value)}
           ></StringInput>
         </Label>
 
         <Label htmlFor="phone">
-          <Text>Phone Number</Text>
+          <Text>{data.sanityContactForm.phone}</Text>
           <StringInput
             required
             type="tel"
             name="phone"
-            placeholder="7607012235"
+            placeholder={data.sanityContactForm.phonePh}
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -216,51 +237,52 @@ function Form() {
         </Label>
 
         <Label htmlFor="email">
-          <Text>Email Address</Text>
+          <Text>{data.sanityContactForm.email}</Text>
           <StringInput
             required
             type="email"
             name="name"
-            placeholder="e.g JohnDoe@example.com"
+            placeholder={data.sanityContactForm.emailPh}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></StringInput>
         </Label>
 
         <Label htmlFor="address">
-          <Text>Address</Text>
+          <Text>{data.sanityContactForm.address}</Text>
           <StringInput
             type="text"
             name="address"
-            placeholder="123 Road Name Rd, San Diego Cal"
+            placeholder={data.sanityContactForm.addressPh}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></StringInput>
         </Label>
 
         <Label htmlFor="description">
-          <Text>Additional Information</Text>
+          <Text>{data.sanityContactForm.info}</Text>
           <AreaText
             name="description"
             rows="4"
             cols="20"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="e.g. “I’m interested in staining my concrete. I'm available at 7pm tomorrow to discuss this further. Feel free to call me at that time”
-"
+            placeholder={data.sanityContactForm.infoPh}
           />
         </Label>
         <br />
         <Submit type="submit" onSubmit={handleSubmit}>
-          <h4>Send Mesage</h4>
+          <H3>{data.sanityContactForm.submit}</H3>
         </Submit>
         <Div>
           <P>
             You can also contact us using<> </>
-            <A href="tel:9096275477">(909) 627-5477</A>
+            <A href={`tel:${data.sanityMetaData.number}`}>
+              {data.sanityMetaData.number}
+            </A>
             <> or </>
-            <A href="mailto: info@canoarchitecture.com">
-              info@canoarchitecture.com
+            <A href={`mailto:${data.sanityMetaData.email}`}>
+              {data.sanityMetaData.email}
             </A>
           </P>
         </Div>

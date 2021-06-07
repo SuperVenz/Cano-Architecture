@@ -14,10 +14,16 @@ export default {
       name: "excite_title",
       type: "string",
     },
+
     {
       title: "Excite",
       name: "excite",
       type: "text",
+    },
+    {
+      title: "Button ",
+      name: "button",
+      type: "string",
     },
     {
       title: "Educate Title",

@@ -19,7 +19,7 @@ const Container = styled.nav`
   }
   @media only screen and (min-width: 1000px) {
     flex-flow: row nowrap;
-    height: 15vh;
+    height: 10vh;
   }
 `;
 const Logo = styled(GatsbyImage)`
@@ -76,6 +76,7 @@ function Nav() {
       <Logo
         image={data.sanityMetaData.logo.asset.gatsbyImageData}
         alt={data.sanityMetaData.logo.alt}
+        objectFit="fill"
       />
       <Div>
         <StyledLink to="/">

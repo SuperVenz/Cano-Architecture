@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { ReactCompareSlider } from "react-compare-slider";
@@ -19,7 +20,7 @@ const Text = styled.h4`
     padding-top: 8px;
   }
 `;
-const TextBefore = styled.div`
+const TextLabel = styled.div`
   @media only screen and (min-width: 600px) {
     display: flex;
     font-size: 1.3em;
@@ -53,10 +54,7 @@ const Div = styled.div`
     }
   }
 `;
-const P = styled.p`
-  background-color: white;
-  opacity: 0.5;
-`;
+
 const ReactCompareSliderStyled = styled(ReactCompareSlider)`
   @media only screen and (min-width: 1000px) {
     height: 500px;
@@ -69,7 +67,20 @@ const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 1000px) {
   }
 `;
+
+const B = styled.p`
+  background-color: white;
+  opacity: 0.5;
+  /* display: ${(props) => (props.primary ? "block" : "none")}; */
+`;
+const A = styled.p`
+  background-color: white;
+  /* display: ${(props) => (props.primary ? "block" : "none")}; */
+  opacity: 0.5;
+`;
 function BeforeAfter(props) {
+  const [beforeTag, setBeforeTag] = useState(true);
+  const [afterTag, setAfterTag] = useState(true);
   const data = useStaticQuery(graphql`
     {
       sanityHomePage {
@@ -91,16 +102,26 @@ function BeforeAfter(props) {
       }
     }
   `);
+
   return (
     <Container>
       {data.sanityHomePage.beforeAfter.map((obj) => {
         return (
           <Div key={obj.beforeImage.alt}>
-            <TextBefore>
-              <P>Before</P>
-              <P>After</P>
-            </TextBefore>
+            <TextLabel>
+              <B primary={beforeTag}>Before</B>
+              <A primary={afterTag}>After</A>
+            </TextLabel>
             <ReactCompareSliderStyled
+              // onPositionChange={function update(pos) {
+              //   if (pos >= 60) {
+              //     setAfterTag(true);
+              //     setBeforeTag(false);
+              //   } else if (pos <= 49) {
+              //     setAfterTag(false);
+              //     setBeforeTag(true);
+              //   }
+              // }}
               position={50}
               itemTwo={
                 <StyledImg

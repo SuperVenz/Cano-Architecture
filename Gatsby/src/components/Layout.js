@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import MobileNav from "./MobileNav.js";
 import Form from "./Form.js";
 import Nav from "./Nav.js";
+import Footer from "./Footer.js";
 function Layout({ children, pageMeta }) {
   return (
     <div>
@@ -25,6 +26,7 @@ function Layout({ children, pageMeta }) {
       <Nav />
       <div>{children}</div>
       <Form />
+      <Footer />
       <MobileNav />
     </div>
   );

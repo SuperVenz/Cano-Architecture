@@ -13,5 +13,15 @@ export default {
       title: "Favcon",
       type: "MainImage",
     },
+    {
+      title: "Number",
+      name: "number",
+      type: "string",
+    },
+    {
+      title: "Email",
+      name: "email",
+      type: "string",
+    },
   ],
 };
