@@ -39,7 +39,11 @@ function MobileNav() {
   return (
     <Nav>
       <Icon>
-        <StyledLink to="/" activeStyle={{ color: "blue" }}>
+        <StyledLink
+          to="/"
+          activeClassName="active"
+          activeStyle={{ color: "blue" }}
+        >
           <StyledHome />
           <Text>Home</Text>
         </StyledLink>

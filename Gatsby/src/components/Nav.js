@@ -19,7 +19,7 @@ const Container = styled.nav`
   }
   @media only screen and (min-width: 1000px) {
     flex-flow: row nowrap;
-    height: 10vh;
+    height: 15vh;
   }
 `;
 const Logo = styled(GatsbyImage)`
@@ -43,7 +43,6 @@ const Div = styled.div`
   }
 `;
 const Text = styled.h4`
-  color: white;
   font-size: 24px;
   padding-left: 32px;
   padding-right: 32px;
@@ -51,12 +50,14 @@ const Text = styled.h4`
   padding-bottom: 24px;
   font-weight: bold;
   text-decoration: none;
+  color: gray;
   @media only screen and (min-width: 1000px) {
     padding-left: 64px;
   }
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
+  color: #c2c2c2;
 `;
 function Nav() {
   const data = useStaticQuery(graphql`
@@ -76,10 +77,10 @@ function Nav() {
       <Logo
         image={data.sanityMetaData.logo.asset.gatsbyImageData}
         alt={data.sanityMetaData.logo.alt}
-        objectFit="fill"
+        objectFit="cover"
       />
       <Div>
-        <StyledLink to="/">
+        <StyledLink to="/" activeStyle={{ color: "white" }}>
           <Text>Home</Text>
         </StyledLink>
         <StyledLink to="/gallery">

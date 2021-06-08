@@ -7,6 +7,7 @@ import Button from "../components/Button";
 import { GatsbyImage } from "gatsby-plugin-image";
 import IndexCarousel from "../components/IndexCarousel";
 import BeforeAfter from "../components/BeforeAfter";
+import ExciteText from "../components/ExciteText";
 
 const Grid = styled.div`
   display: grid;
@@ -39,7 +40,7 @@ const Grid = styled.div`
     margin-right: 4.375;
     grid-template-columns: 40px repeat(12, 1fr) 40px;
     grid-template-areas:
-      "he he he he he he . ex  ex ex ex ex . . "
+      "he he he he he he . ex ex ex ex ex . . "
       ". . . . . ed ed ed ed ed . . . ."
       ". ca ca ca ca ca ca ca ca ca ca ca ca ."
       ". xp xp xp xp xp . pi pi pi pi pi pi pi";
@@ -59,8 +60,10 @@ const Educate = styled.div`
 const Excite = styled.div`
   grid-area: ex;
   @media only screen and (min-width: 1000px) {
-    margin-top: 84px;
-    margin-left: 130px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 10%;
   }
 `;
 const CarouselContainer = styled.div`
@@ -84,7 +87,7 @@ const Picture = styled.div`
 `;
 const HeaderPic = styled(GatsbyImage)`
   @media only screen and (min-width: 600px) {
-    height: 110%;
+    height: 100%;
     width: 120%;
   }
 `;
@@ -109,11 +112,10 @@ const IndexPage = ({ data }) => {
           />
         </Header>
         <Excite>
-          <Article
+          <ExciteText
             header={data.sanityHomePage.excite_title}
             text={data.sanityHomePage.excite}
           />
-          <Button text="Contact Us" />
         </Excite>
         <Educate>
           <Article

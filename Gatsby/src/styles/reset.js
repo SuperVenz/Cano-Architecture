@@ -113,6 +113,7 @@ ul {
 blockquote,
 q {
   quotes: none;
+  color:#5D5D5D;
 }
 blockquote:before,
 blockquote:after,
@@ -131,6 +132,8 @@ html,body{
 }
 h4{
   font-size: 2.074rem;
+    color: #414141;
+
 }
 `;
 

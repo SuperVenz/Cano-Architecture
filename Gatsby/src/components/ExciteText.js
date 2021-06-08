@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 const Container = styled.div`
-  padding-bottom: 24px;
+  font-family: serif;
 
   @media only screen and (min-width: 600px) {
     display: flex;
@@ -17,13 +18,15 @@ const ParaLarge = styled.p`
   font-size: 1.2rem;
   line-height: 24px;
 `;
-function Article({ header, text }) {
+
+function ExciteText({ header, text }) {
   return (
     <Container>
       <Header>{header}</Header>
       <ParaLarge>{text}</ParaLarge>
+      <Button text="Contact Us" />
     </Container>
   );
 }
 
-export default Article;
+export default ExciteText;
