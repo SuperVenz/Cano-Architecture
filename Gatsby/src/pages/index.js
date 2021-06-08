@@ -90,6 +90,9 @@ const HeaderPic = styled(GatsbyImage)`
     height: 100%;
     width: 120%;
   }
+  @media only screen and (min-width: 1000px) {
+    height: 85vh;
+  }
 `;
 const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 1000px) {
