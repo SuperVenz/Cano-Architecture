@@ -22,6 +22,7 @@ const Nav = styled.nav`
 `;
 const Text = styled.p`
   text-decoration: none;
+  font-family: sans-serif;
 `;
 const Icon = styled.div`
   display: flex;

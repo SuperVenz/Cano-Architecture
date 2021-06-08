@@ -48,6 +48,7 @@ const Text = styled.h4`
   padding-right: 32px;
   padding-top: 24px;
   padding-bottom: 24px;
+  font-family: sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: gray;

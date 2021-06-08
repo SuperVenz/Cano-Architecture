@@ -135,6 +135,9 @@ h4{
     color: #414141;
 
 }
+p{
+  font-family: sans-serif;
+}
 `;
 
 export default reset;
