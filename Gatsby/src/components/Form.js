@@ -74,6 +74,7 @@ const StringInput = styled.input`
   border: #c2c2c2 solid 1px;
   @media only screen and (min-width: 1000px) {
     padding: 20px;
+    width: 90%;
   }
 `;
 
