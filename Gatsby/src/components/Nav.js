@@ -58,6 +58,20 @@ const Text = styled.h4`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #c2c2c2;
+  font-size: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  @media only screen and (min-width: 1000px) {
+    padding-left: 64px;
+  }
+  .activeStyle {
+    color: white;
+  }
 `;
 function Nav() {
   const data = useStaticQuery(graphql`
@@ -81,13 +95,13 @@ function Nav() {
       />
       <Div>
         <StyledLink to="/" activeStyle={{ color: "white" }}>
-          <Text>Home</Text>
+          Home
         </StyledLink>
-        <StyledLink to="/gallery">
-          <Text>Galleries</Text>
+        <StyledLink to="/gallery" activeStyle={{ color: "white" }}>
+          Galleries
         </StyledLink>
-        <StyledLink to="/contact">
-          <Text>Contact</Text>
+        <StyledLink to="/contact" activeStyle={{ color: "white" }}>
+          Contact
         </StyledLink>
       </Div>
     </Container>

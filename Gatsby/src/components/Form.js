@@ -9,8 +9,10 @@ const Wrapper = styled.div`
 `;
 const FormBox = styled.form`
   display: flex;
+  width: 100%;
   flex-flow: column nowrap;
   align-items: center;
+
   @media only screen and (min-width: 600px) {
     flex-flow: row wrap;
   }
@@ -24,8 +26,8 @@ const TextContainer = styled.div`
   @media only screen and (min-width: 600px) {
   }
   @media only screen and (min-width: 1000px) {
-    padding-left: 39%;
-    width: 23%;
+    padding-left: 30%;
+    width: 40%;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -33,8 +35,7 @@ const TextContainer = styled.div`
 `;
 
 const Label = styled.label`
-  width: 80%;
-
+  width: 90%;
   @media only screen and (min-width: 600px) {
     padding-left: 24px;
     width: 40%;
@@ -65,10 +66,15 @@ const Text = styled.p`
   padding-bottom: 8px;
 `;
 const StringInput = styled.input`
-  width: 90%;
-  padding: 20px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   font-size: 1.2rem;
   border: #c2c2c2 solid 1px;
+  @media only screen and (min-width: 1000px) {
+    padding: 20px;
+  }
 `;
 
 const AreaText = styled.textarea`
