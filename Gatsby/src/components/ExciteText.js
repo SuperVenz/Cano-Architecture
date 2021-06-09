@@ -9,6 +9,9 @@ const Container = styled.div`
     flex-flow: column wrap;
     justify-content: center;
   }
+  @media only screen and (min-width: 600px) {
+    padding-right: 20%;
+  }
 `;
 const Header = styled.h4`
   font-weight: bold;
@@ -18,6 +21,7 @@ const ParaLarge = styled.p`
   font-size: 1.2rem;
   line-height: 24px;
   color: #5d5d55;
+  margin-bottom: 10%;
 `;
 
 function ExciteText({ header, text }) {

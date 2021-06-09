@@ -24,6 +24,8 @@ const TextContainer = styled.div`
   @media only screen and (min-width: 600px) {
   }
   @media only screen and (min-width: 1000px) {
+    padding-left: 39%;
+    width: 23%;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -99,12 +101,15 @@ const Submit = styled.button`
   text-decoration: none;
   cursor: pointer;
   margin-top: 32px;
+
   @media only screen and (min-width: 600px) {
     width: 50%;
+    margin-left: 25%;
   }
   @media only screen and (min-width: 1000px) {
-    height: 6.5rem;
     margin-bottom: 0px;
+    margin-left: 40%;
+    width: 20vw;
   }
   color: white;
   font-size: 2.07375rem;
@@ -121,7 +126,7 @@ const P = styled.p`
 const Div = styled.div`
   padding-top: 32px;
   text-align: center;
-  width: 90%;
+  width: 100%;
   padding-bottom: 8px;
 `;
 const A = styled.a`
@@ -130,6 +135,10 @@ const A = styled.a`
 
 const H3 = styled.h3`
   font-size: 24px;
+  cursor: pointer;
+  color: white;
+  font-size: 2.07375rem;
+  font-weight: bold;
 `;
 function Form() {
   const [name, setName] = useState("");

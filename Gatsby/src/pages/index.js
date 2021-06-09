@@ -40,10 +40,11 @@ const Grid = styled.div`
     margin-right: 4.375;
     grid-template-columns: 40px repeat(12, 1fr) 40px;
     grid-template-areas:
-      "he he he he he he he . ex ex ex ex . . "
+      "he he he he he he he . ex ex ex ex ex . "
       ". . . . . ed ed ed ed ed . . . ."
       ". ca ca ca ca ca ca ca ca ca ca ca ca ."
-      ". xp xp xp xp xp . pi pi pi pi pi pi pi";
+      ". xp xp xp xp xp . pi pi pi pi pi pi pi"
+      ". fo fo fo fo fo fo fo fo fo fo fo fo .";
   }
 `;
 

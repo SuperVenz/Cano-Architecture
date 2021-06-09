@@ -2,8 +2,9 @@ import React from "react";
 import GalleryCarousel from "../components/GalleryCarousel";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-import Article from "../components/Article";
+
 import styled from "styled-components";
+import GalleryText from "../components/GalleryText";
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 8px repeat(4, 1fr) 8px;
@@ -68,28 +69,28 @@ function gallery({ data }) {
     <Layout>
       <Grid>
         <FirstGal>
-          <Article
+          <GalleryText
             header={data.sanityGalleryPage.precastHeader}
             text={data.sanityGalleryPage.precastText}
           />
           <GalleryCarousel images={data.sanityGalleryPage.precast} />
         </FirstGal>
         <SecondGal>
-          <Article
+          <GalleryText
             header={data.sanityGalleryPage.renovationsHeader}
             text={data.sanityGalleryPage.renovationText}
           />
           <GalleryCarousel images={data.sanityGalleryPage.renovations} />
         </SecondGal>
         <ThirdGal>
-          <Article
+          <GalleryText
             header={data.sanityGalleryPage.concreteHeader}
             text={data.sanityGalleryPage.concreteText}
           />
           <GalleryCarousel images={data.sanityGalleryPage.concrete} />
         </ThirdGal>
         <FourthGal>
-          <Article
+          <GalleryText
             header={data.sanityGalleryPage.stainHeader}
             text={data.sanityGalleryPage.stainText}
           />
