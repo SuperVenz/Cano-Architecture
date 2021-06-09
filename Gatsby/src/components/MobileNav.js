@@ -6,7 +6,7 @@ import Home from "../images/Home.svg";
 import { Link } from "gatsby";
 
 const Nav = styled.nav`
-  height: 10vh;
+  height: 15vh;
   position: sticky;
   bottom: 0;
   width: 100vw;
@@ -23,6 +23,7 @@ const Nav = styled.nav`
 const Text = styled.p`
   text-decoration: none;
   font-family: sans-serif;
+  padding-bottom: 24px;
 `;
 const Icon = styled.div`
   display: flex;
