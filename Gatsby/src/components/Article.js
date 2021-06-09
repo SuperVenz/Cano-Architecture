@@ -11,11 +11,14 @@ const Container = styled.div`
 `;
 const Header = styled.h4`
   font-weight: bold;
+  color: #414141;
+  font-family: Roboto Slab;
 `;
 const ParaLarge = styled.p`
   padding-top: 32px;
   font-size: 1.2rem;
   line-height: 24px;
+  color: #5d5d55;
 `;
 function Article({ header, text }) {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.button`
-  height: 15%;
+  height: 5em;
   font-family: Inter;
   width: 65%;
   background: #0038ff;

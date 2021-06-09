@@ -10,7 +10,7 @@ const Grid = styled.div`
   grid-template-rows: auto;
   grid-gap: 1.25rem;
   grid-template-areas:
-    ". fs fs fs fs ."
+    " . fs fs fs fs ."
     ". sc sc sc sc ."
     ". th th th th ."
     ". fr fr fr fr .";

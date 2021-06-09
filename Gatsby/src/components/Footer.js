@@ -11,14 +11,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row nowrap;
-  justify-content: space-between;
-  padding-left: 8px;
-  padding-right: 8px;
-`;
-const Div = styled.div``;
 const P = styled.p`
   padding-top: 8px;
 `;

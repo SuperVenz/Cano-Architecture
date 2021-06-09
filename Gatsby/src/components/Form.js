@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { navigate } from "gatsby";
 import Article from "./Article";
 import { useStaticQuery, graphql } from "gatsby";
-
+const Wrapper = styled.div`
+  background: #f9fafe;
+`;
 const FormBox = styled.form`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  background: #f9fafe;
-  margin-top: 64px;
   @media only screen and (min-width: 600px) {
     flex-flow: row wrap;
     padding-left: 10%;
@@ -31,11 +31,13 @@ const TextContainer = styled.div`
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+    width: 100%;
   }
 `;
 
 const Label = styled.label`
   width: 80%;
+
   @media only screen and (min-width: 600px) {
     padding-left: 24px;
     width: 40%;
@@ -53,6 +55,9 @@ const Label = styled.label`
       &:nth-child(7) {
         width: 40%;
       }
+      &:nth-child(8) {
+        width: 94%;
+      }
     }
   }
 `;
@@ -63,18 +68,28 @@ const Text = styled.p`
   padding-bottom: 8px;
 `;
 const StringInput = styled.input`
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  width: 90%;
+  padding: 20px;
+  font-size: 1.2rem;
+  border: #c2c2c2 solid 1px;
 `;
 
 const AreaText = styled.textarea`
-  width: 100%;
-  height: 168px;
+  padding: 20px;
+
+  resize: none;
+  height: 80px;
   line-height: 24px;
+  font-size: 1.2rem;
+  font-family: Inter;
+  border: #c2c2c2 solid 1px;
+
   margin-bottom: 16px;
   @media only screen and (min-width: 600px) {
     margin-bottom: 32px;
+  }
+  @media only screen and (min-width: 1000px) {
+    width: 100%;
   }
 `;
 const Submit = styled.button`
@@ -111,7 +126,7 @@ const Div = styled.div`
   padding-top: 32px;
   text-align: center;
   width: 90%;
-  padding-bottom: 32px;
+  padding-bottom: 8px;
 `;
 const A = styled.a`
   text-decoration: none;
@@ -179,7 +194,7 @@ function Form() {
     }
   `);
   return (
-    <>
+    <Wrapper>
       <TextContainer>
         <Article
           header={data.sanityContactForm.header}
@@ -287,7 +302,7 @@ function Form() {
           </P>
         </Div>
       </FormBox>
-    </>
+    </Wrapper>
   );
 }
 

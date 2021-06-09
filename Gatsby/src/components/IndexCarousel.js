@@ -45,6 +45,8 @@ function IndexCarousel(props) {
         showStatus={false}
         showArrows={false}
         autoplay={false}
+        swipeable={true}
+        useKeyboardArrows={true}
       >
         {data.sanityHomePage.carousel.map((obj) => {
           return (

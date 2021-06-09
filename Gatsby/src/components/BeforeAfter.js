@@ -11,72 +11,85 @@ const Container = styled.div`
   @media only screen and (min-width: 600px) {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
-const Text = styled.h4`
+const Text = styled.p`
   @media only screen and (min-width: 600px) {
     padding-bottom: 16px;
-    padding-top: 8px;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: #414141;
   }
 `;
 const TextLabel = styled.div`
   @media only screen and (min-width: 600px) {
     display: flex;
+    font-weight: bold;
+    color: #414141;
     font-size: 1.3em;
-
     flex-direction: row nowrap;
-    width: 95%;
+    width: 100%;
     justify-content: space-between;
     position: relative;
-    top: 30px;
+    top: 14.5%;
     z-index: 40;
   }
 `;
 const Div = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  width: 45%;
+  width: 49.5%;
   height: 300px;
-  padding-left: 2%;
-  padding-right: 2%;
   align-items: center;
   &:last-child {
     width: 100%;
     height: 200px;
   }
   @media only screen and (min-width: 1000px) {
-    width: 40%;
-    height: 100%;
+    align-items: flex-start;
+    height: 35vh;
     &:nth-last-child(-n + 3) {
-      width: 25%;
-      height: 350px;
+      width: 32.6666666667%;
+      height: 33vh;
     }
   }
 `;
 
 const ReactCompareSliderStyled = styled(ReactCompareSlider)`
   @media only screen and (min-width: 1000px) {
-    height: 500px;
     &:nth-last-child(-n + 3) {
-      height: 350px;
     }
   }
 `;
 const StyledImg = styled(GatsbyImage)`
   @media only screen and (min-width: 1000px) {
+    height: 100%;
+    &:nth-last-child(-n + 3) {
+      height: 100%;
+    }
   }
 `;
 
 const B = styled.p`
+  margin-left: 8px;
   background-color: white;
-  opacity: 0.5;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
   /* display: ${(props) => (props.primary ? "block" : "none")}; */
 `;
 const A = styled.p`
+  margin-right: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-color: white;
+
   /* display: ${(props) => (props.primary ? "block" : "none")}; */
-  opacity: 0.5;
 `;
 function BeforeAfter(props) {
   const [beforeTag, setBeforeTag] = useState(true);
@@ -127,14 +140,14 @@ function BeforeAfter(props) {
                 <StyledImg
                   image={obj.beforeImage.asset.gatsbyImageData}
                   alt={obj.beforeImage.alt}
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               }
               itemOne={
                 <StyledImg
                   image={obj.afterImage.asset.gatsbyImageData}
                   alt={obj.afterImage.alt}
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               }
             />

@@ -17,6 +17,7 @@ const ParaLarge = styled.p`
   padding-top: 32px;
   font-size: 1.2rem;
   line-height: 24px;
+  color: #5d5d55;
 `;
 
 function ExciteText({ header, text }) {

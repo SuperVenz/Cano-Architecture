@@ -40,7 +40,7 @@ const Grid = styled.div`
     margin-right: 4.375;
     grid-template-columns: 40px repeat(12, 1fr) 40px;
     grid-template-areas:
-      "he he he he he he . ex ex ex ex ex . . "
+      "he he he he he he he . ex ex ex ex . . "
       ". . . . . ed ed ed ed ed . . . ."
       ". ca ca ca ca ca ca ca ca ca ca ca ca ."
       ". xp xp xp xp xp . pi pi pi pi pi pi pi";
@@ -54,7 +54,7 @@ const Educate = styled.div`
   grid-area: ed;
   margin-top: 32px;
   @media only screen and (min-width: 600px) {
-    margin-top: 20%;
+    text-align: center;
   }
 `;
 const Excite = styled.div`
@@ -63,32 +63,31 @@ const Excite = styled.div`
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-left: 10%;
+    align-items: center;
   }
 `;
 const CarouselContainer = styled.div`
   grid-area: ca;
   @media only screen and (min-width: 1000px) {
-    margin-bottom: 10%;
+    margin-bottom: 8rem;
   }
 `;
 const Experience = styled.div`
   grid-area: xp;
-  margin-top: 32px;
   @media only screen and (min-width: 1000px) {
-    padding-bottom: 10%;
+    margin-bottom: 8rem;
   }
 `;
 const Picture = styled.div`
   grid-area: pi;
   @media only screen and (min-width: 600px) {
-    padding-bottom: 10%;
+    margin-bottom: 8rem;
   }
 `;
 const HeaderPic = styled(GatsbyImage)`
   @media only screen and (min-width: 600px) {
     height: 100%;
-    width: 120%;
+    width: 100%;
   }
   @media only screen and (min-width: 1000px) {
     height: 85vh;
@@ -104,6 +103,7 @@ const StyledPic = styled(GatsbyImage)`
     height: 110%;
   }
 `;
+const CenterArticle = styled(Article)``;
 const IndexPage = ({ data }) => {
   return (
     <Layout>
@@ -121,7 +121,7 @@ const IndexPage = ({ data }) => {
           />
         </Excite>
         <Educate>
-          <Article
+          <CenterArticle
             header={data.sanityHomePage.educate_title}
             text={data.sanityHomePage.educate}
           />

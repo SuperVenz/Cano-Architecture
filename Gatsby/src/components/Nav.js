@@ -15,7 +15,6 @@ const Container = styled.nav`
     background: #414141;
     height: 20vh;
     align-items: center;
-    border-bottom: solid black 3px;
   }
   @media only screen and (min-width: 1000px) {
     flex-flow: row nowrap;
