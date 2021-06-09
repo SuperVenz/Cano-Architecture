@@ -7,6 +7,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   padding-left: 24px;
+  margin-bottom: 16px;
 `;
 const Text = styled.p`
   padding-top: 16px;

@@ -13,10 +13,8 @@ const FormBox = styled.form`
   align-items: center;
   @media only screen and (min-width: 600px) {
     flex-flow: row wrap;
-    padding-left: 10%;
   }
   @media only screen and (min-width: 1000px) {
-    padding-left: 60px;
   }
 `;
 const TextContainer = styled.div`
@@ -24,14 +22,11 @@ const TextContainer = styled.div`
   padding-left: 26px;
   padding-right: 26px;
   @media only screen and (min-width: 600px) {
-    padding-left: 40px;
   }
   @media only screen and (min-width: 1000px) {
-    padding-left: 0%;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
-    width: 100%;
   }
 `;
 
@@ -75,10 +70,10 @@ const StringInput = styled.input`
 `;
 
 const AreaText = styled.textarea`
+  width: 90%;
   padding: 20px;
-
   resize: none;
-  height: 80px;
+  height: 100px;
   line-height: 24px;
   font-size: 1.2rem;
   font-family: Inter;
@@ -93,26 +88,27 @@ const AreaText = styled.textarea`
   }
 `;
 const Submit = styled.button`
-  margin-top: 32px;
-  height: 15%;
-  width: 80%;
+  padding: 2rem;
+  line-height: 40px;
+  font-size: 33.18px;
+  font-family: Inter;
   background: #0038ff;
+  width: 90%;
   border: none;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
   cursor: pointer;
-  border-radius: 32px;
-  color: white;
+  margin-top: 32px;
   @media only screen and (min-width: 600px) {
     width: 50%;
   }
   @media only screen and (min-width: 1000px) {
-    width: 40%;
-    margin-left: 25%;
+    height: 6.5rem;
+    margin-bottom: 0px;
   }
+  color: white;
+  font-size: 2.07375rem;
+  font-weight: bold;
   &:hover {
     background: #1b43c6;
   }

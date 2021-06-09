@@ -16,6 +16,7 @@ const Header = styled.h4`
 `;
 const ParaLarge = styled.p`
   padding-top: 32px;
+  font-family: Inter;
   font-size: 1.2rem;
   line-height: 24px;
   color: #5d5d55;
